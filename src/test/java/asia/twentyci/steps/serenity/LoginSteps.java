@@ -8,7 +8,7 @@ public class LoginSteps {
 	LoginPage onLoginpage;
 	
 	@Step
-	public void open_application() {
+	public void login_steps() {
 		onLoginpage.enterTextIntoUserEmail("admin@twentyea.co.uk");
 	}
 }

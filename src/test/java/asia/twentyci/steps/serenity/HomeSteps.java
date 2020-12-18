@@ -8,7 +8,7 @@ public class HomeSteps {
 	HomePage onHomepage;
 	
 	@Step
-	public void open_application() {
+	public void home_steps() {
 		onHomepage.open();
 		onHomepage.clickOnLogin();
 	}
