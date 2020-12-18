@@ -11,8 +11,8 @@ public class LoginPage extends PageObject{
 	@FindBy(xpath = "//input[@id='user_email']")
 	WebElementFacade useremailField;
 	
-	public void enterTextIntoUserEmail() {
-		useremailField.type();
+	public void enterTextIntoUserEmail(String userEmail) {
+		useremailField.type(userEmail);
 	}
 	
 	public void enterTextIntoUserPassword(String userPassword) {
