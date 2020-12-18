@@ -17,13 +17,15 @@ public class WhenOpeningTheWeb {
 	WebDriver driver;
 	
 	@Steps
-	HomeSteps hompage;
-	LoginSteps loginpage;
+	HomeSteps homeSteps;
+	
+	@Steps
+	LoginSteps loginSteps;
 	
 	
 	@Test
 	public void open_web() {
-		hompage.home_steps();
-		loginpage.login_steps();
+		homeSteps.home_steps();
+		loginSteps.login_steps();
 	}
 }

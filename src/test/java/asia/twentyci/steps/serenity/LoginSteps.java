@@ -10,5 +10,7 @@ public class LoginSteps {
 	@Step
 	public void login_steps() {
 		onLoginpage.enterTextIntoUserEmail("admin@twentyea.co.uk");
+		onLoginpage.enterTextIntoUserPassword("Password123!");
+		onLoginpage.clickOnSubmit();
 	}
 }
