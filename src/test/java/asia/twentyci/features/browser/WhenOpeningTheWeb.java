@@ -25,7 +25,10 @@ public class WhenOpeningTheWeb {
 	
 	@Test
 	public void open_web() {
-		atHomeSteps.openApplication();
-		atLoginSteps.loginSystemWith();
+		atHomeSteps.openApplication(); 
+				
+		String useremail = "admin@twentyea.co.uk";
+		String password = "Password123!";
+		atLoginSteps.loginSystemWith(useremail, password);
 	}
 }
