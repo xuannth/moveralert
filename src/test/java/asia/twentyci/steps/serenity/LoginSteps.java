@@ -8,9 +8,11 @@ public class LoginSteps {
 	LoginPage onLoginpage;
 	
 	@Step
-	public void login_steps() {
-		onLoginpage.enterTextIntoUserEmail("admin@twentyea.co.uk");
-		onLoginpage.enterTextIntoUserPassword("Password123!");
+	public void loginSystemWith() {	
+		String useremail = "admin@twentyea.co.uk";
+		String password = "Password123!";
+		onLoginpage.enterTextIntoUserEmail(useremail);
+		onLoginpage.enterTextIntoUserPassword(password);
 		onLoginpage.clickOnSubmit();
 	}
 }
