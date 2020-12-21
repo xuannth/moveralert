@@ -10,25 +10,25 @@ import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
 
-@RunWith(SerenityRunner.class)	
+@RunWith(SerenityRunner.class)
 public class WhenOpeningTheWeb {
 
-	@Managed 
+	@Managed
 	WebDriver driver;
-	
+
 	@Steps
 	HomeSteps atHomeSteps;
-	
+
 	@Steps
 	LoginSteps atLoginSteps;
-	
-	
+
 	@Test
 	public void open_web() {
-		atHomeSteps.openApplication(); 
-				
+		
 		String useremail = "admin@twentyea.co.uk";
 		String password = "Password123!";
+
+		atHomeSteps.openApplication();
 		atLoginSteps.loginSystemWith(useremail, password);
 	}
 }
