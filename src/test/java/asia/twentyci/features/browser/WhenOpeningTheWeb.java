@@ -4,6 +4,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
+import asia.twentyci.steps.serenity.AccountSteps;
+import asia.twentyci.steps.serenity.GenerateOrderSteps;
 import asia.twentyci.steps.serenity.HomeSteps;
 import asia.twentyci.steps.serenity.LoginSteps;
 import net.serenitybdd.junit.runners.SerenityRunner;
@@ -21,6 +23,12 @@ public class WhenOpeningTheWeb {
 
 	@Steps
 	LoginSteps atLoginSteps;
+	
+	@Steps
+	AccountSteps atAccountSteps;
+	
+	@Steps
+	GenerateOrderSteps atGenerateOrder;
 
 	@Test
 	public void open_web() {
@@ -30,5 +38,7 @@ public class WhenOpeningTheWeb {
 
 		atHomeSteps.openApplication();
 		atLoginSteps.loginSystemWith(useremail, password);
+		atAccountSteps.openGenerate();
+		atGenerateOrder.selectToGenerateOrder();
 	}
 }
