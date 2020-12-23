@@ -35,10 +35,11 @@ public class WhenOpeningTheWeb {
 		
 		String useremail = "admin@twentyea.co.uk";
 		String password = "Password123!";
+		String location_user = "G41";
 
 		atHomeSteps.openApplication();
 		atLoginSteps.loginSystemWith(useremail, password);
 		atAccountSteps.openGenerate();
-		atGenerateOrder.selectToGenerateOrder();
+		atGenerateOrder.selectToGenerateOrder(location_user);
 	}
 }
